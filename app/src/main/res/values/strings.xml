@@ -11,5 +11,7 @@
     <string name="txtDificultad">Dificultad</string>
     <string name="txtFacil">Facil</string>
     <string name="txtDificil">Dificil</string>
+    <string name="txtPuntaje">Puntaje</string>
+    <string name="txtNivel">Nivel</string>
 
 </resources>
