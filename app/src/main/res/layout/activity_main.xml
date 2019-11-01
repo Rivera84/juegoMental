@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#03A9F4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tituloAPP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="serif"
+        android:foregroundTint="#00FFFFFF"
+        android:text="@string/TxtnombreTitulo"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageMente"
+        android:layout_width="178dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/nombreImagen"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloAPP"
+        app:srcCompat="@drawable/mente"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/btnIniciarPartida"
+        android:layout_width="179dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#387779"
+        android:foregroundTint="#00FFFFFF"
+        android:text="@string/btnIniciarPartida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageMente" />
+
+    <Button
+        android:id="@+id/btnComoJugar"
+        android:layout_width="179dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#387779"
+        android:text="@string/btnComoJugar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarPartida" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="179dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="#387779"
+        android:text="@string/btnSalir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnComoJugar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

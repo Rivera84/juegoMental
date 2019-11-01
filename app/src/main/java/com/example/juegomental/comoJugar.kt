@@ -14,6 +14,7 @@ class comoJugar : AppCompatActivity() {
         btnAtras.setOnClickListener(){
             val Intent= Intent(this,MainActivity::class.java)
             startActivity(Intent)
+
         }
     }
 }
