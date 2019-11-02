@@ -8,45 +8,46 @@
     tools:context=".modoFacil">
 
     <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="390dp"
         android:layout_height="418dp"
-        android:layout_marginTop="50dp"
         android:background="#607d8b"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/txtnPuntos"
+        app:layout_constraintVertical_bias="0.134">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn1"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:background="@android:color/holo_green_dark"
+            android:background="#79669900"
             android:translationX="10dp"
             android:translationY="20dp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn2"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:background="@android:color/holo_red_dark"
+            android:background="#72CC0000"
             android:translationX="200dp"
             android:translationY="20dp" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn3"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:background="@android:color/holo_orange_light"
+            android:background="#77FFBB33"
             android:translationX="10dp"
             android:translationY="210dp" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btn4"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:background="@android:color/holo_blue_dark"
+            android:background="#740099CC"
             android:translationX="200dp"
             android:translationY="210dp" />
     </FrameLayout>
@@ -66,36 +67,40 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="130dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="108dp"
         android:text="@string/txtNivel"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="100dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+    <TextView
+        android:id="@+id/txtnPuntos"
+        android:layout_width="75dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="102dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="66dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.993"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btniniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/btnIniciarPartida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
