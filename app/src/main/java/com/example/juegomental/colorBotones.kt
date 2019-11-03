@@ -6,18 +6,20 @@ import android.widget.Button
 import android.widget.TextView
 import java.util.*
 
-class getBotonTask(val btn1 : Button, val btn2: Button, val btn3: Button, val btn4: Button, val txtPunto: TextView): AsyncTask<Void, Void, String>(){
+class getBotonTask(val btn1 : Button, val btn2: Button, val btn3: Button, val btn4: Button, val txtPunto: TextView, val numeroBoton: Int): AsyncTask<Void, Void, String>(){
+
+
 
     override fun onPreExecute() {
 
-        val numeroBoton=aleatorio()
         txtPunto.append(numeroBoton.toString())
-        nuevoColor(numeroBoton)
+            nuevoColor(numeroBoton)
+
     }
 
     override fun doInBackground(vararg params: Void?): String {
         try {
-            Thread.sleep(500)
+            Thread.sleep(100)
         } catch (e: InterruptedException) {
         }
         return toString()
@@ -35,12 +37,6 @@ class getBotonTask(val btn1 : Button, val btn2: Button, val btn3: Button, val bt
 
     }
 
-    fun aleatorio(): Int {
-        var random = Random()
-        val num1 = (random.nextInt(4) + 1)
-        return num1
-
-    }
 
     fun nuevoColor(numeroBoton: Int) {
 
