@@ -1,19 +1,19 @@
 package com.example.juegomental
 
 
-import android.graphics.Color
-import android.os.AsyncTask
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_modo_facil.*
 import java.util.*
-import kotlin.collections.ArrayList
+
+var numeroAleatorio:Int= 0
+var listaNumero = java.util.ArrayList<Int>()
+
 
 
 class modoFacil : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,34 +26,41 @@ class modoFacil : AppCompatActivity() {
         val txtPuntos: TextView = findViewById(R.id.txtnPuntos)
         val txtNivel: TextView = findViewById(R.id.txtNivel)
 
+
+        var c =0
         btniniciar.setOnClickListener() {
-            var c = 0
-            var numeroAleatorio=aleatorio()
-            val listaNumero = ArrayList<Int>()
+            numeroAleatorio= aleatorio()
             listaNumero.add(numeroAleatorio)
-            do {
 
-                val getBotonTask = getBotonTask(btn1, btn2, btn3, btn4, txtPuntos, numeroAleatorio)
-                getBotonTask.execute()
-                    txtNivel.append(listaNumero.toString())
-                    c += 1
+                 for (num in listaNumero ) {
 
 
-            } while (c == 2)
+                        val getBotonTask =
+                            getBotonTask(btn1, btn2, btn3, btn4, txtPuntos, num)
+                        getBotonTask.execute()
+                    }
+
+
+
+            txtNivel.append(listaNumero.toString())
         }
 
 
-    }
-
-    fun aleatorio(): Int {
 
 
-        var random = Random()
-        val num1 = (random.nextInt(4) + 1)
 
-        return num1
 
     }
+
+}
+
+fun aleatorio(): Int {
+
+
+    var random = Random()
+    val num1 = (random.nextInt(4) + 1)
+
+    return num1
 }
 
 
