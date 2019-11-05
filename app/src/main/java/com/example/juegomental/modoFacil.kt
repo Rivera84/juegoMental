@@ -7,10 +7,11 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_modo_facil.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 var numeroAleatorio:Int= 0
-var listaNumero = java.util.ArrayList<Int>()
-
+var listaNumero = ArrayList<Int>()
+var listaBotones = ArrayList<Int>()
 
 
 class modoFacil : AppCompatActivity() {
@@ -26,30 +27,21 @@ class modoFacil : AppCompatActivity() {
         val txtPuntos: TextView = findViewById(R.id.txtnPuntos)
         val txtNivel: TextView = findViewById(R.id.txtNivel)
 
+        tomarBotones(btn1,btn2,btn3,btn4,txtNivel)
 
-        var c =0
-        btniniciar.setOnClickListener() {
-            numeroAleatorio= aleatorio()
-            listaNumero.add(numeroAleatorio)
+            btniniciar.setOnClickListener() {
+                listaBotones = ArrayList<Int>()
+                numeroAleatorio= aleatorio()
+                listaNumero.add(numeroAleatorio)
 
-                 for (num in listaNumero ) {
-
-
-                        val getBotonTask =
-                            getBotonTask(btn1, btn2, btn3, btn4, txtPuntos, num)
-                        getBotonTask.execute()
-                    }
+                for (num in listaNumero ) {
 
 
-
-            txtNivel.append(listaNumero.toString())
-        }
-
-
-
-
-
-
+                    val getBotonTask =
+                        getBotonTask(btn1, btn2, btn3, btn4, txtPuntos, num)
+                    getBotonTask.execute()
+                }
+            }
     }
 
 }
@@ -64,24 +56,32 @@ fun aleatorio(): Int {
 }
 
 
+fun tomarBotones(btn1:Button, btn2:Button, btn3:Button,btn4:Button, txtNivel:TextView) {
+    var botonActivado=0
 
 
-/*
-    fun nuevoColor(numeroBoton:Int){
-        txtnPuntos.append(numeroBoton.toString())
-        when(numeroBoton){
-            1 -> btn1.setBackgroundColor(Color.GREEN)
-            2 -> btn2.setBackgroundColor(Color.RED)
-            3 -> btn3.setBackgroundColor(Color.YELLOW)
-            4 -> btn4.setBackgroundColor(Color.BLUE)
-            else -> colorActual()
-        }
-
+    btn1.setOnClickListener {
+        botonActivado=1
+        listaBotones.add(botonActivado)
+        txtNivel.append(listaBotones.toString())
+    }
+    btn2.setOnClickListener {
+        botonActivado=2
+        listaBotones.add(botonActivado)
+        txtNivel.append(listaBotones.toString())
+    }
+    btn3.setOnClickListener {
+        botonActivado=3
+        listaBotones.add(botonActivado)
+        txtNivel.append(listaBotones.toString())
+    }
+    btn4.setOnClickListener {
+        botonActivado=4
+        listaBotones.add(botonActivado)
+        txtNivel.append(listaBotones.toString())
     }
 
 
-
-
-
 }
-*/
+
+
