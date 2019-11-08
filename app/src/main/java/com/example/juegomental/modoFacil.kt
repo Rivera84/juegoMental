@@ -1,8 +1,8 @@
 package com.example.juegomental
 
 
-import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -31,18 +31,38 @@ class modoFacil : AppCompatActivity() {
         val txtNivel: TextView = findViewById(R.id.txtNivel)
 
 
-        //Programacion del Boton inicial
-        tomarBotones(btn1,btn2,btn3,btn4,txtNivel)
+            var punto=0
+           btniniciar.setOnClickListener {
+           var c=0
+          //  do{
 
-            btniniciar.setOnClickListener() {
-                listaBotones = ArrayList<Int>()
+                //txtPuntos.append(listaBotones.toString())
+                txtNivel.append(listaNumero.toString())
+                Log.d("Ciclo While","Hola")
+                if(listaNumero== listaBotones){
+                listaBotones = ArrayList()
 
                 //llamar a la clase AsyncTask
                 val getBotonTask =
                         getBotonTask(btn1, btn2, btn3, btn4, txtPuntos, aleatorio())
                     getBotonTask.execute()
-                txtPuntos.append(listaNumero.toString())
-            }
+
+
+                    punto += 10
+
+                }
+
+                //Llamar a la funcion de tomar los botones
+
+               // tomarBotones(btn1,btn2,btn3,btn4)
+                txtPuntos.append(punto.toString())
+                c += 1
+        //    }while(listaNumero!= listaBotones)
+
+
+
+           }
+
     }
 
 }
@@ -50,36 +70,36 @@ class modoFacil : AppCompatActivity() {
 
 //Funcion para generar el numero aleatorio
 fun aleatorio(): Int {
-    var random = Random()
-    val num1 = (random.nextInt(4) + 1)
-    return num1
+    val random = Random()
+    return (random.nextInt(4) + 1)
 }
 
 
 
 //Almacenar en arreglo los botones pulsados
-fun tomarBotones(btn1:Button, btn2:Button, btn3:Button,btn4:Button, txtNivel:TextView) {
-    var botonActivado=0
+fun tomarBotones(btn1:Button, btn2:Button, btn3:Button,btn4:Button) {
+    var botonActivado: Int
+    Log.d("ArregloBotones","Hola")
 
     btn1.setOnClickListener {
         botonActivado=1
         listaBotones.add(botonActivado)
-        txtNivel.append(listaBotones.toString())
+
     }
     btn2.setOnClickListener {
         botonActivado=2
         listaBotones.add(botonActivado)
-        txtNivel.append(listaBotones.toString())
+
     }
     btn3.setOnClickListener {
         botonActivado=3
         listaBotones.add(botonActivado)
-        txtNivel.append(listaBotones.toString())
+
     }
     btn4.setOnClickListener {
         botonActivado=4
         listaBotones.add(botonActivado)
-        txtNivel.append(listaBotones.toString())
+
     }
 
 
