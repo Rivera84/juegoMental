@@ -29,11 +29,11 @@
         <TextView
             android:id="@+id/textView3"
             android:layout_width="222dp"
-            android:layout_height="88dp"
+            android:layout_height="102dp"
             android:text="@string/TxtInstrucciones"
             android:textSize="20sp"
             android:translationX="40dp"
-            android:translationY="200dp" />
+            android:translationY="170dp" />
 
         <Button
             android:id="@+id/btnAtras"

@@ -1,11 +1,14 @@
 package com.example.juegomental
 
 
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_modo_facil.*
 import java.util.*
@@ -14,13 +17,19 @@ import kotlin.collections.ArrayList
 
 var listaNumero = ArrayList<Int>() //Arreglo para guardar la secuencia de numeros
 var listaBotones = ArrayList<Int>() //Arreglo para guardar la secuencia de botones pulsadas
-
+var nivel=0
+var punto=0
 
 class modoFacil : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modo_facil)
+
+        listaNumero = ArrayList<Int>() //Arreglo para guardar la secuencia de numeros
+        listaBotones = ArrayList<Int>() //Arreglo para guardar la secuencia de botones pulsadas
+        nivel=0
+        punto=0
 
         //Declaracion de los botones y txtViews
 
@@ -31,13 +40,12 @@ class modoFacil : AppCompatActivity() {
         val txtPuntos: TextView = findViewById(R.id.txtnPuntos)
         val txtNivel: TextView = findViewById(R.id.txtNivel)
 
-            var nivel=0
-            var punto=0
+
            btniniciar.setOnClickListener {
                txtNivel.text = ""
                txtPuntos.text = ""
 
-
+                txtPuntos.append(punto.toString())
                 txtNivel.append(nivel.toString())
 
                 if(listaNumero== listaBotones){
@@ -54,14 +62,31 @@ class modoFacil : AppCompatActivity() {
                     punto += 5
 
                 } else if(listaNumero!= listaBotones){
-                Toast.makeText(applicationContext,"Has perdido",Toast.LENGTH_SHORT).show()
-               }
+                //Toast.makeText(applicationContext,"Has perdido",Toast.LENGTH_SHORT).show()
+                    val intent=Intent(this,MainActivity::class.java)
+                    val builder = AlertDialog.Builder(this)
+                    builder.setTitle("Has Perdido")
+                    builder.setMessage("Puntos:$punto   Nivel:$nivel")
+                    builder.setNegativeButton("Ok"){ dialogInterface :DialogInterface,_: Int->
+                        startActivity(intent)
+                        finish()
 
-               txtPuntos.append(punto.toString())
+                    }
+                    builder.show()
+                }
+
+
            }
 
-        //recreate()
+        btnSalir.setOnClickListener {
+            val Intent= Intent(this,MainActivity::class.java)
+            startActivity(Intent)
+        }
 
+           /* if(listaNumero==listaBotones) {
+                recreate()
+            }
+*/
     }
 
 }
