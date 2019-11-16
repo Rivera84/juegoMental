@@ -8,9 +8,9 @@
     tools:context=".Dificultad">
 
     <FrameLayout
-        android:layout_width="290dp"
-        android:layout_height="418dp"
-        android:background="#90a4ae"
+        android:layout_width="278dp"
+        android:layout_height="350dp"
+        android:background="#C390A4AE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,21 +18,24 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="117dp"
+            android:layout_width="148dp"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/txtDificultad"
             android:textAlignment="center"
-            android:textSize="24sp"
-            android:translationX="90dp"
-            android:translationY="50dp" />
+            android:textSize="30sp"
+            android:translationX="70dp"
+            android:translationY="50dp"
+            android:typeface="serif" />
 
         <Button
             android:id="@+id/btnDificultad"
-            android:layout_width="wrap_content"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:text="@string/btnAtras"
-            android:translationX="100dp"
-            android:translationY="280dp" />
+            android:translationX="85dp"
+            android:translationY="280dp"
+            android:typeface="serif" />
 
         <RadioGroup
             android:layout_width="183dp"
@@ -45,14 +48,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/txtFacil"
-                android:translationY="20dp" />
+                android:textSize="18sp"
+                android:translationY="25dp"
+                android:typeface="serif" />
 
             <RadioButton
                 android:id="@+id/chkDificil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/txtDificil"
-                android:translationY="25dp" />
+                android:textSize="18sp"
+                android:translationY="35dp"
+                android:typeface="serif" />
         </RadioGroup>
 
     </FrameLayout>

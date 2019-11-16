@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="298dp"
         android:layout_height="481dp"
-        android:background="#FFFFFF"
+        android:background="#92FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,29 +18,35 @@
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="153dp"
-            android:layout_height="31dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/TxtComoJugar"
             android:textAlignment="center"
             android:textSize="24sp"
-            android:translationX="80dp"
-            android:translationY="100dp" />
+            android:translationX="0dp"
+            android:translationY="100dp"
+            android:typeface="serif" />
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="222dp"
-            android:layout_height="102dp"
+            android:layout_width="match_parent"
+            android:layout_height="122dp"
             android:text="@string/TxtInstrucciones"
+            android:textAlignment="center"
+            android:textAllCaps="false"
             android:textSize="20sp"
-            android:translationX="40dp"
-            android:translationY="170dp" />
+            android:translationX="0dp"
+            android:translationY="170dp"
+            android:typeface="serif" />
 
         <Button
             android:id="@+id/btnAtras"
-            android:layout_width="119dp"
+            android:layout_width="123dp"
             android:layout_height="wrap_content"
             android:text="@string/btnAtras"
-            android:translationX="98dp"
-            android:translationY="350dp" />
+            android:translationX="90dp"
+            android:translationY="350dp"
+            android:typeface="serif" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

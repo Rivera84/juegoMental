@@ -46,7 +46,7 @@ class getBotonTask(val btn1 : Button, val btn2: Button, val btn3: Button, val bt
 
         //Colores iniciales de los botones
     private fun colorAntes(){
-        Thread.sleep(500)
+        Thread.sleep(300)
         btn1.setBackgroundColor(Color.parseColor("#79669900"))
         btn2.setBackgroundColor(Color.parseColor("#72CC0000"))
         btn3.setBackgroundColor(Color.parseColor("#77FFBB33"))

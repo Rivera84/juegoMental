@@ -12,8 +12,9 @@
         android:layout_width="390dp"
         android:layout_height="418dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="10dp"
-        android:background="#B4607D8B"
+        android:background="#C2607D8B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
@@ -49,50 +50,60 @@
             android:id="@+id/btn4"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:background="#740099CC"
+            android:background="#A80099CC"
             android:translationX="200dp"
             android:translationY="210dp" />
     </FrameLayout>
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="71dp"
-        android:layout_height="27dp"
+        android:layout_width="93dp"
+        android:layout_height="30dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="50dp"
         android:text="@string/txtPuntaje"
-        android:textSize="20sp"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:typeface="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_width="79dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="108dp"
         android:text="@string/txtNivel"
-        android:textSize="20sp"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtnPuntos"
-        android:layout_width="75dp"
-        android:layout_height="23dp"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
         android:layout_marginStart="95dp"
         android:layout_marginTop="52dp"
+        android:textAlignment="center"
+        android:textSize="23sp"
+        android:typeface="serif"
         app:layout_constraintEnd_toStartOf="@+id/textView5"
-        app:layout_constraintHorizontal_bias="0.223"
+        app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtNivel"
-        android:layout_width="66dp"
-        android:layout_height="23dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="32dp"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="28dp"
+        android:textAlignment="center"
+        android:textSize="23sp"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,6 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="@string/btnIniciarPartida"
+        android:typeface="serif"
         app:layout_constraintEnd_toStartOf="@+id/btnSalir"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
@@ -113,6 +125,7 @@
         android:layout_marginTop="44dp"
         android:layout_marginEnd="50dp"
         android:text="@string/btnSalir"
+        android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

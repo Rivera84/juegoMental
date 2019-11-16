@@ -25,8 +25,8 @@ class modoFacil : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modo_facil)
 
-        listaNumero = ArrayList<Int>() //Arreglo para guardar la secuencia de numeros
-        listaBotones = ArrayList<Int>() //Arreglo para guardar la secuencia de botones pulsadas
+        listaNumero = ArrayList() //Arreglo para guardar la secuencia de numeros
+        listaBotones = ArrayList() //Arreglo para guardar la secuencia de botones pulsadas
         nivel=0
         punto=0
 
@@ -42,7 +42,7 @@ class modoFacil : AppCompatActivity() {
 
            btniniciar.setOnClickListener {
 
-                   var c=1
+
                txtNivel.text = ""
                txtPuntos.text = ""
 
@@ -52,24 +52,23 @@ class modoFacil : AppCompatActivity() {
                 if(listaNumero== listaBotones){
                 listaBotones = ArrayList()
 
+
                 //llamar a la clase AsyncTask
                 val getBotonTask =
                         getBotonTask(btn1, btn2, btn3, btn4, txtPuntos, aleatorio())
                     getBotonTask.execute()
 
-
-
                     nivel+=1
                     punto += 5
 
-             /*       if(listaNumero==listaBotones) {
-                        recreate()
-                    }
-
-              */
 
                 } else if(listaNumero!= listaBotones){
-
+                    nivel-=1
+                    punto -= 5
+                    txtNivel.text = ""
+                    txtPuntos.text = ""
+                    txtPuntos.append(punto.toString())
+                    txtNivel.append(nivel.toString())
                     val intent=Intent(this,MainActivity::class.java)
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Has Perdido")
@@ -87,8 +86,16 @@ class modoFacil : AppCompatActivity() {
            }
 
         btnSalir.setOnClickListener {
-            val Intent= Intent(this,MainActivity::class.java)
-            startActivity(Intent)
+            val intent=Intent(this,MainActivity::class.java)
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Tu puntuación es:")
+            builder.setMessage("Puntos:$punto   Nivel:$nivel")
+            builder.setNegativeButton("Ok"){ dialogInterface :DialogInterface,_: Int->
+                startActivity(intent)
+                finish()
+
+            }
+            builder.show()
         }
 
 
