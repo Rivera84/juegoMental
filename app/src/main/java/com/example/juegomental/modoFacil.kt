@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_modo_facil.*
@@ -42,6 +41,8 @@ class modoFacil : AppCompatActivity() {
 
 
            btniniciar.setOnClickListener {
+
+                   var c=1
                txtNivel.text = ""
                txtPuntos.text = ""
 
@@ -61,8 +62,14 @@ class modoFacil : AppCompatActivity() {
                     nivel+=1
                     punto += 5
 
+             /*       if(listaNumero==listaBotones) {
+                        recreate()
+                    }
+
+              */
+
                 } else if(listaNumero!= listaBotones){
-                //Toast.makeText(applicationContext,"Has perdido",Toast.LENGTH_SHORT).show()
+
                     val intent=Intent(this,MainActivity::class.java)
                     val builder = AlertDialog.Builder(this)
                     builder.setTitle("Has Perdido")
@@ -76,6 +83,7 @@ class modoFacil : AppCompatActivity() {
                 }
 
 
+
            }
 
         btnSalir.setOnClickListener {
@@ -83,17 +91,14 @@ class modoFacil : AppCompatActivity() {
             startActivity(Intent)
         }
 
-           /* if(listaNumero==listaBotones) {
-                recreate()
-            }
-*/
+
     }
 
 }
 
 
 //Funcion para generar el numero aleatorio
-fun aleatorio(): Int {
+private fun  aleatorio(): Int {
     val random = Random()
     return (random.nextInt(4) + 1)
 }
@@ -133,9 +138,8 @@ fun tomarBotones(btn1:Button, btn2:Button, btn3:Button,btn4:Button) {
         pressButton.execute()
         listaBotones.add(botonActivado)
 
+        }
     }
 
-
-}
 
 

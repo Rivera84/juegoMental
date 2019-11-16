@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".modoFacil"></activity>
+        <activity android:name=".modoDificil"></activity>
+        <activity android:name=".modoFacil" />
         <activity android:name=".Dificultad" />
         <activity android:name=".comoJugar" />
         <activity android:name=".MainActivity">

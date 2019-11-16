@@ -32,24 +32,28 @@
             android:layout_height="wrap_content"
             android:text="@string/btnAtras"
             android:translationX="100dp"
-            android:translationY="260dp" />
+            android:translationY="280dp" />
 
-        <CheckBox
-            android:id="@+id/chkFacil"
-            android:layout_width="95dp"
-            android:layout_height="wrap_content"
-            android:text="@string/txtFacil"
-            android:textSize="20sp"
+        <RadioGroup
+            android:layout_width="183dp"
+            android:layout_height="143dp"
             android:translationX="50dp"
-            android:translationY="125dp" />
+            android:translationY="100dp">
 
-        <CheckBox
-            android:id="@+id/checkBox2"
-            android:layout_width="106dp"
-            android:layout_height="wrap_content"
-            android:text="@string/txtDificil"
-            android:textSize="20sp"
-            android:translationX="50dp"
-            android:translationY="180dp" />
+            <RadioButton
+                android:id="@+id/chkFacil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtFacil"
+                android:translationY="20dp" />
+
+            <RadioButton
+                android:id="@+id/chkDificil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtDificil"
+                android:translationY="25dp" />
+        </RadioGroup>
+
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

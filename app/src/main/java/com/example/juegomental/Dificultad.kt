@@ -23,5 +23,10 @@ class Dificultad : AppCompatActivity() {
             startActivity(Intent)
         }
 
+        chkDificil.setOnClickListener(){
+            val Intent=Intent(this,modoDificil::class.java)
+            startActivity(Intent)
+        }
+
     }
 }

@@ -34,7 +34,7 @@ class getBotonTask(val btn1 : Button, val btn2: Button, val btn3: Button, val bt
         }
         catch (e: InterruptedException) {
         }
-        tomarBotones(btn1,btn2,btn3,btn4)
+       tomarBotones(btn1,btn2,btn3,btn4)
         return toString()
 
     }
