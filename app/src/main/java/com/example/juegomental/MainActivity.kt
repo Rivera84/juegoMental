@@ -20,6 +20,9 @@ class MainActivity : AppCompatActivity() {
             val Intent = Intent(this, Dificultad::class.java)
             startActivity(Intent)
         }
+        btnSalir.setOnClickListener(){
+            finish()
+        }
     }
 
 

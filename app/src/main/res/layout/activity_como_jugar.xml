@@ -25,19 +25,19 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:translationX="0dp"
-            android:translationY="100dp"
+            android:translationY="80dp"
             android:typeface="serif" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="match_parent"
-            android:layout_height="122dp"
+            android:layout_height="99dp"
             android:text="@string/TxtInstrucciones"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textSize="20sp"
             android:translationX="0dp"
-            android:translationY="170dp"
+            android:translationY="150dp"
             android:typeface="serif" />
 
         <Button
@@ -47,6 +47,16 @@
             android:text="@string/btnAtras"
             android:translationX="90dp"
             android:translationY="350dp"
+            android:typeface="serif" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/TxtInstrucciones2"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:translationY="250dp"
             android:typeface="serif" />
     </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

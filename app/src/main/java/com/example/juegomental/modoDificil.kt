@@ -56,6 +56,10 @@ class modoDificil : AppCompatActivity() {
             } else if(listaNumero!= listaBotones){
                 nivel-=1
                 punto -= 5
+                if(punto<=0 && nivel<=0){
+                    nivel=0
+                    punto=0
+                }
                 txtNivel.text = ""
                 txtPuntos.text = ""
                 txtPuntos.append(punto.toString())
@@ -64,7 +68,7 @@ class modoDificil : AppCompatActivity() {
                 val builder = AlertDialog.Builder(this)
                 builder.setTitle("Has Perdido")
                 builder.setMessage("Puntos:$punto   Nivel:$nivel")
-                builder.setNegativeButton("Ok"){ dialogInterface : DialogInterface, _: Int->
+                builder.setNegativeButton("Ok"){ _: DialogInterface, _: Int->
                     startActivity(intent)
                     finish()
 
@@ -77,11 +81,21 @@ class modoDificil : AppCompatActivity() {
         }
 
         btnSalir.setOnClickListener {
+            nivel-=1
+            punto -= 5
+            if(punto<=0 && nivel<=0){
+                nivel=0
+                punto=0
+            }
+            txtNivel.text = ""
+            txtPuntos.text = ""
+            txtPuntos.append(punto.toString())
+            txtNivel.append(nivel.toString())
             val intent=Intent(this,MainActivity::class.java)
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Tu puntuación es:")
             builder.setMessage("Puntos:$punto   Nivel:$nivel")
-            builder.setNegativeButton("Ok"){ dialogInterface :DialogInterface,_: Int->
+            builder.setNegativeButton("Ok"){ _:DialogInterface, _: Int->
                 startActivity(intent)
                 finish()
 

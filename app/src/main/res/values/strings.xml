@@ -6,7 +6,8 @@
     <string name="btnComoJugar">Como Jugar</string>
     <string name="btnSalir">Salir</string>
     <string name="TxtComoJugar">Como Jugar</string>
-    <string name="TxtInstrucciones">Consiste en presionar los cuadrados en el orden en el que se iluminan</string>
+    <string name="TxtInstrucciones">1. Consiste en presionar los cuadrados en el orden en el que se iluminan</string>
+    <string name="TxtInstrucciones2">2. Se debe presionar el boton "INICIAR PARTIDA" despues de cada nivel</string>
     <string name="btnAtras">Atras</string>
     <string name="txtDificultad">Dificultad</string>
     <string name="txtFacil">Facil</string>
