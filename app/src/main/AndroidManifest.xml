@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".modoDificil" />
+        <activity android:name=".ModoDificil" />
         <activity android:name=".ModoFacil" />
         <activity android:name=".Dificultad" />
         <activity android:name=".ComoJugar" />

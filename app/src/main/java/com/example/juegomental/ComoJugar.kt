@@ -1,10 +1,9 @@
 package com.example.juegomental
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_como_jugar.*
-import kotlin.system.exitProcess
 
 class ComoJugar : AppCompatActivity() {
 

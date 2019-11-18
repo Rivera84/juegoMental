@@ -13,7 +13,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-class modoDificil : AppCompatActivity() {
+class ModoDificil : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
