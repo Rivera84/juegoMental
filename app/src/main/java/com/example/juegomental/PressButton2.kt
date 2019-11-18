@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Button
 
 
-class pressButton2(val btn1 : Button, val btn2: Button, val btn3: Button, val btn4: Button,val btn5:Button, val btn6:Button, val color: Int): AsyncTask<Void, Void, String>(){
+class PressButton2(val btn1 : Button, val btn2: Button, val btn3: Button, val btn4: Button, val btn5:Button, val btn6:Button, val color: Int): AsyncTask<Void, Void, String>(){
 
 
 

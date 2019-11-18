@@ -1,9 +1,8 @@
 package com.example.juegomental
 
-import android.app.PendingIntent
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_dificultad.*
 
 class Dificultad : AppCompatActivity() {
@@ -12,20 +11,20 @@ class Dificultad : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dificultad)
 
-        btnDificultad.setOnClickListener(){
-            val Intent = Intent(this,MainActivity::class.java)
-            startActivity(Intent)
+        btnDificultad.setOnClickListener{
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
 
         }
 
-        chkFacil.setOnClickListener(){
-            val Intent=Intent(this,modoFacil::class.java)
-            startActivity(Intent)
+        chkFacil.setOnClickListener {
+            val intent=Intent(this,ModoFacil::class.java)
+            startActivity(intent)
         }
 
-        chkDificil.setOnClickListener(){
-            val Intent=Intent(this,modoDificil::class.java)
-            startActivity(Intent)
+        chkDificil.setOnClickListener{
+            val intent=Intent(this,modoDificil::class.java)
+            startActivity(intent)
         }
 
     }

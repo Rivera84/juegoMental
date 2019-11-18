@@ -19,7 +19,7 @@ var listaBotones = ArrayList<Int>() //Arreglo para guardar la secuencia de boton
 var nivel=0
 var punto=0
 
-class modoFacil : AppCompatActivity() {
+class ModoFacil : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +55,7 @@ class modoFacil : AppCompatActivity() {
 
                 //llamar a la clase AsyncTask
                 val getBotonTask =
-                        getBotonTask(btn1, btn2, btn3, btn4, txtPuntos, aleatorio())
+                        GetBotonTask(btn1, btn2, btn3, btn4, txtPuntos, aleatorio())
                     getBotonTask.execute()
 
                     nivel+=1
@@ -129,7 +129,7 @@ fun tomarBotones(btn1:Button, btn2:Button, btn3:Button,btn4:Button) {
 
     btn1.setOnClickListener {
         botonActivado=1
-        val pressButton = pressButton(btn1,btn2,btn3,btn4,1)
+        val pressButton = PressButton(btn1,btn2,btn3,btn4,1)
         pressButton.execute()
         listaBotones.add(botonActivado)
     }
@@ -137,21 +137,21 @@ fun tomarBotones(btn1:Button, btn2:Button, btn3:Button,btn4:Button) {
 
     btn2.setOnClickListener {
         botonActivado=2
-        val pressButton = pressButton(btn1,btn2,btn3,btn4,2)
+        val pressButton = PressButton(btn1,btn2,btn3,btn4,2)
         pressButton.execute()
         listaBotones.add(botonActivado)
 
     }
     btn3.setOnClickListener {
         botonActivado=3
-        val pressButton = pressButton(btn1,btn2,btn3,btn4,3)
+        val pressButton = PressButton(btn1,btn2,btn3,btn4,3)
         pressButton.execute()
         listaBotones.add(botonActivado)
 
     }
     btn4.setOnClickListener {
         botonActivado=4
-        val pressButton = pressButton(btn1,btn2,btn3,btn4,4)
+        val pressButton = PressButton(btn1,btn2,btn3,btn4,4)
         pressButton.execute()
         listaBotones.add(botonActivado)
 

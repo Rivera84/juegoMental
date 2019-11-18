@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,17 +12,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnComoJugar.setOnClickListener(){
-            val Intent= Intent(this,comoJugar::class.java)
-            startActivity(Intent )
+        btnComoJugar.setOnClickListener{
+            val intent= Intent(this,ComoJugar::class.java)
+            startActivity(intent )
         }
 
-        btnIniciarPartida.setOnClickListener(){
-            val Intent = Intent(this, Dificultad::class.java)
-            startActivity(Intent)
+        btnIniciarPartida.setOnClickListener{
+            val intent = Intent(this, Dificultad::class.java)
+            startActivity(intent)
         }
-        btnSalir.setOnClickListener(){
-            finish()
+        btnSalir.setOnClickListener{
+            exitProcess(0)
         }
     }
 

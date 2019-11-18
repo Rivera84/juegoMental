@@ -4,16 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_como_jugar.*
+import kotlin.system.exitProcess
 
-class comoJugar : AppCompatActivity() {
+class ComoJugar : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_como_jugar)
 
-        btnAtras.setOnClickListener(){
-            val Intent= Intent(this,MainActivity::class.java)
-            startActivity(Intent)
+        btnAtras.setOnClickListener{
+            val intent= Intent(this,MainActivity::class.java)
+            startActivity(intent)
 
         }
     }

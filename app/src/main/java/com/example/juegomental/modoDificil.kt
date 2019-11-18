@@ -19,8 +19,8 @@ class modoDificil : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modo_dificil)
 
-        listaNumero = ArrayList<Int>() //Arreglo para guardar la secuencia de numeros
-        listaBotones = ArrayList<Int>() //Arreglo para guardar la secuencia de botones pulsadas
+        listaNumero = ArrayList() //Arreglo para guardar la secuencia de numeros
+        listaBotones = ArrayList() //Arreglo para guardar la secuencia de botones pulsadas
         nivel=0
         punto=0
 
@@ -47,7 +47,7 @@ class modoDificil : AppCompatActivity() {
 
                 //llamar a la clase AsyncTask
                 val getBotonTask =
-                    getBotonTask2(btn1modoDificil,btn2modoDificil,btn3modoDificil,btn4modoDificil,txtPuntos,aleatorio(),btn5modoDificil,btn6modoDificil)
+                    GetBotonTask2(btn1modoDificil,btn2modoDificil,btn3modoDificil,btn4modoDificil,txtPuntos,aleatorio(),btn5modoDificil,btn6modoDificil)
                 getBotonTask.execute()
 
                 nivel+=1
@@ -119,7 +119,7 @@ class modoDificil : AppCompatActivity() {
 
         btn1.setOnClickListener {
             botonActivado=1
-            val pressButton2 = pressButton2(btn1,btn2,btn3,btn4,btn5,btn6,1)
+            val pressButton2 = PressButton2(btn1,btn2,btn3,btn4,btn5,btn6,1)
             pressButton2.execute()
             listaBotones.add(botonActivado)
         }
@@ -127,35 +127,35 @@ class modoDificil : AppCompatActivity() {
 
         btn2.setOnClickListener {
             botonActivado=2
-            val pressButton2 = pressButton2(btn1,btn2,btn3,btn4,btn5,btn6,2)
+            val pressButton2 = PressButton2(btn1,btn2,btn3,btn4,btn5,btn6,2)
             pressButton2.execute()
             listaBotones.add(botonActivado)
 
         }
         btn3.setOnClickListener {
             botonActivado=3
-            val pressButton2 = pressButton2(btn1,btn2,btn3,btn4,btn5,btn6,3)
+            val pressButton2 = PressButton2(btn1,btn2,btn3,btn4,btn5,btn6,3)
             pressButton2.execute()
             listaBotones.add(botonActivado)
 
         }
         btn4.setOnClickListener {
             botonActivado=4
-            val pressButton2 = pressButton2(btn1,btn2,btn3,btn4,btn5,btn6,4)
+            val pressButton2 = PressButton2(btn1,btn2,btn3,btn4,btn5,btn6,4)
             pressButton2.execute()
             listaBotones.add(botonActivado)
 
         }
         btn5.setOnClickListener {
             botonActivado=5
-            val pressButton2 = pressButton2(btn1,btn2,btn3,btn4,btn5,btn6,5)
+            val pressButton2 = PressButton2(btn1,btn2,btn3,btn4,btn5,btn6,5)
             pressButton2.execute()
             listaBotones.add(botonActivado)
 
         }
         btn6.setOnClickListener {
             botonActivado=6
-            val pressButton2 = pressButton2(btn1,btn2,btn3,btn4,btn5,btn6,6)
+            val pressButton2 = PressButton2(btn1,btn2,btn3,btn4,btn5,btn6,6)
             pressButton2.execute()
             listaBotones.add(botonActivado)
 

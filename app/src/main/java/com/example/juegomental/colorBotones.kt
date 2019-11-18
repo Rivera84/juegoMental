@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 
 
-class getBotonTask(val btn1 : Button, val btn2: Button, val btn3: Button, val btn4: Button, val txtPunto: TextView, val numeroAleatorio:Int): AsyncTask<Void, Void, String>(){
+class GetBotonTask(val btn1 : Button, val btn2: Button, val btn3: Button, val btn4: Button, val txtPunto: TextView, val numeroAleatorio:Int): AsyncTask<Void, Void, String>(){
 
 //añade el orden de numeros al arraylist
     override fun onPreExecute() {
